@@ -8,3 +8,4 @@
 (el-get-bundle use-package)
 (el-get-bundle helm)
 (el-get-bundle less-css-mode)
+(el-get-bundle tuareg-mode)
