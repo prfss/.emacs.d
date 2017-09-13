@@ -5,7 +5,6 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 (setq coding-system-for-read 'utf-8)
-(setq coding-system-for-write 'utf-8)
 (set-locale-environment "ja_JP.utf-8")
 (setq current-language-environment "Japanese")
 (setq default-input-method "japanese")
