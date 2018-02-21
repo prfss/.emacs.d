@@ -25,7 +25,7 @@
 			   empty
                          ))
 
-  (let ((my/bg-color "#242020"))
+  (let ((my/bg-color "gray18"))
     (set-face-attribute 'whitespace-trailing nil
 			:foreground "DeepPink"
 			:background my/bg-color
