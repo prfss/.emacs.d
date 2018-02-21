@@ -27,7 +27,7 @@
 
 
 ;;; customize theme
-(load-theme 'dark t)
+(load-theme 'dark2 t)
 
 ;;; debug
 (setq debug-on-error nil)

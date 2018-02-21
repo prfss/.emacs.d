@@ -3,4 +3,5 @@
 !init.el
 !inits/
 !dark-theme.el
+!dark2-theme.el
 !.gitignore

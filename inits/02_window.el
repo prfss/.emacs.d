@@ -2,6 +2,7 @@
 ;; Frame title
 (setq frame-title-format (format "emacs@%s : %%f" (system-name)))
 
+(setq-default tab-width 4 indent-tabs-mode nil)
 (recentf-mode 1)
 (show-paren-mode 1)
 (line-number-mode 1)
