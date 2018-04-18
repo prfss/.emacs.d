@@ -9,4 +9,4 @@
 (el-get-bundle helm)
 (el-get-bundle less-css-mode)
 (el-get-bundle tuareg-mode)
-;(el-get-bundle auto-complete)
+(el-get-bundle auto-complete)
