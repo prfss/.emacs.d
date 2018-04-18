@@ -47,10 +47,15 @@
   :config (powerline-default-theme))
 
 ;;; OCaml
-;; merlin
-(let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
- (when (and opam-share (file-directory-p opam-share))
-  (push (expand-file-name "emacs/site-lisp" opam-share) load-path)
-  (autoload 'merlin-mode "merlin" nil t nil)
-  (add-hook 'tuareg-mode-hook 'merlin-mode t)
-  (add-hook 'caml-mode-hook 'merlin-mode t)))
+;; tuareg
+(setq auto-mode-alist
+      (append '(("\\.ml[ily]?$" . tuareg-mode)
+                ("\\.topml$" . tuareg-mode))
+              auto-mode-alist))
+
+(setq opam-share (substring (shell-command-to-string "opam config var share") 0 -1))
+(add-to-list 'load-path (concat opam-share "/emacs/site-lisp"))
+
+;;; ocp-indent and merlin are installed through opam
+;; ocp-indent
+(require 'ocp-indent)
