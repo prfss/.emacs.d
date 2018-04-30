@@ -8,7 +8,7 @@
 ;;; shell
 ;; shell-mode
 (add-hook 'shell-mode-hook
-	  (lambda ()
+          (lambda ()
             (set-buffer-process-coding-system 'utf-8 'utf-8)))
 ;; terminal
 (use-package multi-term
@@ -20,24 +20,24 @@
   :config
   (global-whitespace-mode 1)
   (setq whitespace-style '(face
-			   trailing
-			   tabs
-			   empty
-                         ))
+                           trailing
+                           tabs
+                           empty
+                           ))
 
   (let ((my/bg-color "gray18"))
     (set-face-attribute 'whitespace-trailing nil
-			:foreground "DeepPink"
-			:background my/bg-color
-			:underline t)
+                        :foreground "DeepPink"
+                        :background my/bg-color
+                        :underline t)
     (set-face-attribute 'whitespace-tab nil
-			:foreground "Cyan"
-			:background my/bg-color
-			:underline t)
+                        :foreground "Cyan"
+                        :background my/bg-color
+                        :underline t)
     (set-face-attribute 'whitespace-empty nil
-			:foreground "DeepPink"
-			:background my/bg-color
-			:underline t))
+                        :foreground "DeepPink"
+                        :background my/bg-color
+                        :underline t))
   )
 
 (use-package helm
