@@ -8,3 +8,6 @@
 (line-number-mode 1)
 (column-number-mode 1)
 (tool-bar-mode 0)
+
+(if window-system
+    (set-frame-parameter nil 'alpha 85))
