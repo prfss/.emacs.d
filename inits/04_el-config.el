@@ -65,3 +65,8 @@
 (add-hook 'caml-mode-hook 'merlin-mode)
 (setq merlin-command 'opam)
 (setq merlin-ac-setup 'easy)
+
+;;; haskell-mode
+;; stylish-haskell
+(custom-set-variables
+ '(haskell-stylish-on-save t))
