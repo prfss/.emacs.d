@@ -66,7 +66,21 @@
 (setq merlin-command 'opam)
 (setq merlin-ac-setup 'easy)
 
-;;; haskell-mode
+;;; Haskell
 ;; stylish-haskell
 (custom-set-variables
  '(haskell-stylish-on-save t))
+
+
+;;; Scala
+;; ensime
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+;;; C/C++
+;; irony-mode
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+;;; Company-mode
+(add-hook 'after-init-hook 'global-company-mode)
