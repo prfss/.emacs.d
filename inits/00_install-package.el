@@ -4,7 +4,6 @@
 (el-get-bundle ensime)
 (el-get-bundle flycheck)
 (el-get-bundle flycheck-haskell)
-(el-get-bundle flycheck-irony)
 (el-get-bundle ggtags)
 (el-get-bundle helm)
 (el-get-bundle hs-lint)
