@@ -85,5 +85,13 @@
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
 
+;;; Python
+;; jedi (company-jedi)
+(add-hook 'python-mode-hook
+          (lambda () (add-to-list 'company-backends 'company-jedi)))
+(setq jedi:complete-on-dot t)
+
+
 ;;; Company-mode
 (add-hook 'after-init-hook 'global-company-mode)
+

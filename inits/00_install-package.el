@@ -1,4 +1,5 @@
 (el-get-bundle company-irony)
+(el-get-bundle company-jedi :depends (company-mode))
 (el-get-bundle company-mode)
 (el-get-bundle ddskk)
 (el-get-bundle ensime)
@@ -8,6 +9,7 @@
 (el-get-bundle helm)
 (el-get-bundle hs-lint)
 (el-get-bundle irony-mode)
+(el-get-bundle elpa:jedi-core)
 (el-get-bundle less-css-mode)
 (el-get-bundle multi-term)
 (el-get-bundle powerline)
