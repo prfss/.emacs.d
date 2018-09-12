@@ -14,6 +14,8 @@
 (use-package multi-term
   :config (setq system-uses-terminfo nil))
 
+;;; yasnippet
+(yas-global-mode 1)
 
 ;;; whitespace-mode
 (use-package whitespace

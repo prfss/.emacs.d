@@ -18,3 +18,5 @@
 (el-get-bundle scala-mode)
 (el-get-bundle tuareg-mode)
 (el-get-bundle use-package)
+(el-get-bundle yasnippet)
+(el-get-bundle yasnippet-snippets)
