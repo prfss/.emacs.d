@@ -15,13 +15,15 @@
  '(css-indent-offset 2)
  '(custom-enabled-themes nil)
  '(custom-safe-themes nil)
+ '(flycheck-disabled-checkers (quote (c/c++-clang)))
  '(haskell-indent-look-past-empty-line nil)
  '(haskell-indent-offset 2)
  '(haskell-indent-thenelse 1)
  '(haskell-mode-hook (quote (haskell-indent-mode turn-on-haskell-doc-mode)) t)
  '(haskell-program-name "ghci")
+ '(haskell-stylish-on-save t)
+ '(irony-additional-clang-options (quote ("-std=c++11")))
  '(message-default-charset (quote iso-8859-1))
- '(open-as (quote open-as-html))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
@@ -32,3 +34,9 @@
  '(proof-three-window-enable t)
  '(proof-three-window-mode-policy (quote hybrid))
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
