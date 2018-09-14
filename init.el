@@ -23,7 +23,7 @@
 ;;; Initialization code ends here
 
 ;;; el for defcustom
-(setq custom-file (locate-user-emacs-file "custom.el"))
+(setq custom-file (locate-user-emacs-file "inits/99_custom.el"))
 
 
 ;;; customize theme
