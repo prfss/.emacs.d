@@ -3,7 +3,11 @@
 ;;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; C++11
-(add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++11")))
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (setq flycheck-gcc-language-standard "c++11")
+            (setq flycheck-clang-language-standard "c++11")
+            ))
 
 ;;; shell
 ;; shell-mode
@@ -61,7 +65,7 @@
 ;;; ocp-indent and merlin are installed through opam
 ;; ocp-indent
 (require 'ocp-indent)
-;; merling
+;; merlin
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (add-hook 'caml-mode-hook 'merlin-mode)
@@ -70,9 +74,7 @@
 
 ;;; Haskell
 ;; stylish-haskell
-(custom-set-variables
- '(haskell-stylish-on-save t))
-
+(custom-set-variables '(haskell-stylish-on-save t))
 
 ;;; Scala
 ;; ensime
@@ -83,6 +85,7 @@
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 ;; company-irony
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
@@ -93,7 +96,5 @@
           (lambda () (add-to-list 'company-backends 'company-jedi)))
 (setq jedi:complete-on-dot t)
 
-
 ;;; Company-mode
 (add-hook 'after-init-hook 'global-company-mode)
-

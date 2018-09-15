@@ -15,7 +15,7 @@
  '(css-indent-offset 2)
  '(custom-enabled-themes nil)
  '(custom-safe-themes nil)
- '(flycheck-disabled-checkers (quote (c/c++-clang)))
+ '(flycheck-disabled-checkers nil)
  '(haskell-indent-look-past-empty-line nil)
  '(haskell-indent-offset 2)
  '(haskell-indent-thenelse 1)
