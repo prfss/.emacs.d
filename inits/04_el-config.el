@@ -89,6 +89,8 @@
 ;; company-irony
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-irony))
+;; irony-eldoc
+(add-hook 'irony-mode-hook #'irony-eldoc)
 
 ;;; Python
 ;; jedi (company-jedi)
