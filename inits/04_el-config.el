@@ -96,5 +96,9 @@
           (lambda () (add-to-list 'company-backends 'company-jedi)))
 (setq jedi:complete-on-dot t)
 
+;;; Go
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-go))
+
 ;;; Company-mode
 (add-hook 'after-init-hook 'global-company-mode)
