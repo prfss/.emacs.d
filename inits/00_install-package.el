@@ -11,6 +11,7 @@
 (el-get-bundle ggtags)
 (el-get-bundle helm)
 (el-get-bundle hs-lint)
+(el-get-bundle irony-eldoc)
 (el-get-bundle irony-mode)
 (el-get-bundle elpa:jedi-core)
 (el-get-bundle less-css-mode)
