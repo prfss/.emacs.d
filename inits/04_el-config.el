@@ -102,3 +102,6 @@
 
 ;;; Company-mode
 (add-hook 'after-init-hook 'global-company-mode)
+
+;;; neotree
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))

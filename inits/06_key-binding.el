@@ -8,3 +8,6 @@
   (save-buffers-kill-terminal))
 
 (global-set-key (kbd "C-c C-c") (lambda () (interactive) (force-kill-emacs)))
+
+;; neotree
+(global-set-key [f8] 'neotree-toggle)

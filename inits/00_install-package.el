@@ -1,3 +1,4 @@
+(el-get-bundle all-the-icons)
 (el-get-bundle company-irony)
 (el-get-bundle company-jedi :depends (company-mode))
 (el-get-bundle company-mode)
@@ -16,6 +17,7 @@
 (el-get-bundle elpa:jedi-core)
 (el-get-bundle less-css-mode)
 (el-get-bundle multi-term)
+(el-get-bundle neotree)
 (el-get-bundle powerline)
 (el-get-bundle proof-general)
 (el-get-bundle sbt-mode)
