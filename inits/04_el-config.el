@@ -25,12 +25,7 @@
 (use-package whitespace
   :config
   (global-whitespace-mode 1)
-  (setq whitespace-style '(face
-                           trailing
-                           tabs
-                           empty
-                           ))
-
+  (setq whitespace-style '(face trailing tabs empty))
   (let ((my/bg-color "gray18"))
     (set-face-attribute 'whitespace-trailing nil
                         :foreground "DeepPink"
@@ -101,6 +96,8 @@
 ;;; Go
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-go))
+(add-hook 'go-mode-hook
+          (lambda () (set (make-local-variable 'whitespace-style) '(face trailing empty))))
 
 ;;; Company-mode
 (add-hook 'after-init-hook 'global-company-mode)
