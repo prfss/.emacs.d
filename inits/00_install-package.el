@@ -24,6 +24,7 @@
 (el-get-bundle rust-mode)
 (el-get-bundle sbt-mode)
 (el-get-bundle scala-mode)
+(el-get-bundle toml-mode)
 (el-get-bundle tuareg-mode)
 (el-get-bundle use-package)
 (el-get-bundle yasnippet)
