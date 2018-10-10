@@ -1,6 +1,7 @@
 *
 # whitelist
 !init.el
+!custom.el
 !inits/
 !dark-theme.el
 !dark2-theme.el

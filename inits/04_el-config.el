@@ -48,9 +48,6 @@
   :diminish helm-mode
   :bind (("M-x" . helm-M-x)))
 
-(use-package powerline
-  :config (powerline-default-theme))
-
 ;;; OCaml
 ;; tuareg
 (setq auto-mode-alist

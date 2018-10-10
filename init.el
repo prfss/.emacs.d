@@ -23,8 +23,12 @@
 ;;; Initialization code ends here
 
 ;;; el for defcustom
-(setq custom-file (locate-user-emacs-file "inits/99_custom.el"))
+(setq custom-file (locate-user-emacs-file "custom.el"))
 
+;;; powerline - Do not place following code in inits/04_el-configl.el
+(use-package powerline
+  :config
+  (powerline-default-theme))
 
 ;;; customize theme
 (load-theme 'dark2 t)
