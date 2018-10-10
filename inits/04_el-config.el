@@ -19,10 +19,13 @@
   :config (setq system-uses-terminfo nil))
 
 ;;; yasnippet
-(yas-global-mode 1)
+(use-package yasnippet
+  :diminish yas-minor-mode
+  :config (yas-global-mode 1))
 
 ;;; whitespace-mode
 (use-package whitespace
+  :diminish global-whitespace-mode
   :config
   (global-whitespace-mode 1)
   (setq whitespace-style '(face trailing tabs empty))
@@ -42,6 +45,7 @@
   )
 
 (use-package helm
+  :diminish helm-mode
   :bind (("M-x" . helm-M-x)))
 
 (use-package powerline
@@ -59,7 +63,7 @@
 
 ;;; ocp-indent and merlin are installed through opam
 ;; ocp-indent
-(require 'ocp-indent)
+(use-package ocp-indent)
 ;; merlin
 (autoload 'merlin-mode "merlin" "Merlin mode" t)
 (add-hook 'tuareg-mode-hook 'merlin-mode)
