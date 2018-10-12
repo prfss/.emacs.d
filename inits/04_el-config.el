@@ -105,3 +105,6 @@
 
 ;;; neotree
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+;;; electric-pair-mode
+(electric-pair-mode 1)

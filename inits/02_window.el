@@ -5,7 +5,7 @@
 (setq-default tab-width 4 indent-tabs-mode nil)
 (recentf-mode 1)
 (show-paren-mode 1)
-                                        ;(line-number-mode 1)
+(line-number-mode 1)
 (column-number-mode 1)
 (tool-bar-mode 0)
 
