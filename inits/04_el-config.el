@@ -2,11 +2,11 @@
 
 ;;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
-;; C++11
+;; C++14
 (add-hook 'c++-mode-hook
           (lambda ()
-            (setq flycheck-gcc-language-standard "c++11")
-            (setq flycheck-clang-language-standard "c++11")
+            (setq flycheck-gcc-language-standard "c++14")
+            (setq flycheck-clang-language-standard "c++14")
             ))
 
 ;;; shell
