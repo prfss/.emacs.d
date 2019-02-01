@@ -1,5 +1,13 @@
 ;;; load and configure emacs lisp
 
+;;; Style
+(custom-set-variables '(c-default-style
+                        (quote
+                         ((c++-mode  . "stroustrup")
+                          (java-mode . "java")
+                          (awk-mode  . "awk")
+                          (other     . "gnu")))))
+
 ;;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; C++14
@@ -74,8 +82,14 @@
 (setq merlin-ac-setup 'easy)
 
 ;;; Haskell
-;; stylish-haskell
-(custom-set-variables '(haskell-stylish-on-save t))
+(custom-set-variables
+  '(haskell-indent-look-past-empty-line nil)
+  '(haskell-indent-offset 2)
+  '(haskell-indent-thenelse 1)
+  '(haskell-mode-hook (quote (haskell-indent-mode turn-on-haskell-doc-mode)) t)
+  '(haskell-program-name "ghci")
+  ;; stylish-haskell
+  '(haskell-stylish-on-save t))
 
 ;;; Scala
 ;; ensime
@@ -92,6 +106,7 @@
   '(add-to-list 'company-backends 'company-irony))
 ;; irony-eldoc
 (add-hook 'irony-mode-hook #'irony-eldoc)
+(setq irony-additional-clang-options (quote ("-std=c++11")))
 
 ;;; Python
 ;; jedi (company-jedi)
@@ -113,3 +128,11 @@
 
 ;;; electric-pair-mode
 (electric-pair-mode 1)
+
+;;; ProofGeneral
+(custom-set-variables
+ '(proof-follow-mode (quote follow))
+ '(proof-layout-windows-on-visit-file t)
+ '(proof-three-window-enable t)
+ '(proof-three-window-mode-policy (quote hybrid)))
+
