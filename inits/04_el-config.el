@@ -3,19 +3,19 @@
 ;;; Style
 (custom-set-variables '(c-default-style
                         (quote
-                         ((c++-mode  . "stroustrup")
-                          (java-mode . "java")
+                         ((java-mode . "java")
                           (awk-mode  . "awk")
                           (other     . "gnu")))))
 
 ;;; flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
-;; C++14
-(add-hook 'c++-mode-hook
-          (lambda ()
-            (setq flycheck-gcc-language-standard "c++14")
-            (setq flycheck-clang-language-standard "c++14")
-            ))
+(use-package flycheck
+  :config (add-hook 'after-init-hook #'global-flycheck-mode)
+  ;; C++
+  (setq flycheck-gcc-language-standard "c++14")
+  (setq flycheck-clang-language-standard "c++14")
+  (add-to-list 'flycheck-gcc-warnings "conversion")
+  (add-to-list 'flycheck-clang-warnings "conversion")
+  )
 
 ;;; shell
 ;; shell-mode
@@ -106,7 +106,7 @@
   '(add-to-list 'company-backends 'company-irony))
 ;; irony-eldoc
 (add-hook 'irony-mode-hook #'irony-eldoc)
-(setq irony-additional-clang-options (quote ("-std=c++11")))
+(setq irony-additional-clang-options (quote ("-std=c++14")))
 
 ;;; Python
 ;; jedi (company-jedi)
