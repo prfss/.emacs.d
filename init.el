@@ -32,7 +32,8 @@
 ;;; el for defcustom
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
-;;; powerline - Do not place following code in inits/04_el-configl.el
+;;; powerline - Do not place following code in inits/*.el
+(el-get-bundle powerline)
 (use-package powerline
   :config
   (powerline-default-theme))

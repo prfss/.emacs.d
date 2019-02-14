@@ -20,7 +20,6 @@
 (el-get-bundle less-css-mode)
 (el-get-bundle multi-term)
 (el-get-bundle neotree)
-(el-get-bundle powerline)
 (el-get-bundle proof-general)
 (el-get-bundle rust-mode)
 (el-get-bundle sbt-mode)
