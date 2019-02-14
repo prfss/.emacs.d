@@ -23,7 +23,10 @@
 
 (el-get-bundle! 'init-loader
   (setq-default init-loader-show-log-after-init nil)
-  (init-loader-load))
+  (init-loader-load)
+  (let ((local (concat (file-name-as-directory init-loader-directory) "local")))
+    (if (file-exists-p local)
+        (init-loader-load local))))
 
 (el-get 'sync)
 
@@ -37,9 +40,6 @@
 (use-package powerline
   :config
   (powerline-default-theme))
-
-;;; customize theme
-(load-theme 'dark2 t)
 
 ;;; debug
 (setq debug-on-error nil)

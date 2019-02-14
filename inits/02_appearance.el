@@ -1,4 +1,5 @@
 (setq inhibit-startup-screen t)
+
 ;; Frame title
 (setq frame-title-format (format "emacs@%s : %%f" (system-name)))
 
@@ -9,9 +10,14 @@
 (column-number-mode 1)
 (tool-bar-mode 0)
 
+;; transparency
 (if window-system
     (set-frame-parameter nil 'alpha 85))
 
+;; line number
 (if (version<= "26.0.50" emacs-version)
     (global-display-line-numbers-mode)
   (global-linum-mode))
+
+;; theme
+(load-theme 'dark2 t)
