@@ -1,6 +1,6 @@
 ;; flycheck
 (add-hook 'c++-mode-hook
-          (lambda () (flycheck-select-checker 'c/c++-gcc)))
+          (lambda () (flycheck-select-checker 'c/c++-clang)))
 
 ;; irony-mode
 (add-hook 'c++-mode-hook 'irony-mode)
@@ -12,4 +12,3 @@
   '(add-to-list 'company-backends 'company-irony))
 ;; irony-eldoc
 (add-hook 'irony-mode-hook #'irony-eldoc)
-
