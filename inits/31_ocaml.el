@@ -17,3 +17,7 @@
 (add-hook 'caml-mode-hook 'merlin-mode)
 (setq merlin-command 'opam)
 (setq merlin-ac-setup 'easy)
+
+;; merlin-eldoc
+(use-package merlin-eldoc
+  :hook ((reason-mode tuareg-mode caml-mode) . merlin-eldoc-setup))

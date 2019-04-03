@@ -4,6 +4,7 @@
 (el-get-bundle company-mode)
 (el-get-bundle ddskk)
 (el-get-bundle diminish)
+(el-get-bundle Khady/merlin-eldoc)
 (el-get-bundle emacs-racer)
 (el-get-bundle ensime)
 (el-get-bundle flycheck)
