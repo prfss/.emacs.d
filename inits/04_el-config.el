@@ -1,6 +1,7 @@
 ;;; load and configure emacs lisp
 
 ;;; flycheck
+(el-get-bundle flycheck)
 (use-package flycheck
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -12,10 +13,12 @@
           (lambda ()
             (set-buffer-process-coding-system 'utf-8 'utf-8)))
 ;; terminal
+(el-get-bundle multi-term)
 (use-package multi-term
   :config (setq system-uses-terminfo nil))
 
 ;;; yasnippet
+(el-get-bundle yasnippet)
 (use-package yasnippet
   :diminish yas-minor-mode
   :config
@@ -23,6 +26,8 @@
   (define-key yas-minor-mode-map (kbd "<tab>") nil)
   (define-key yas-minor-mode-map (kbd "TAB") nil)
   (define-key yas-minor-mode-map (kbd "C-c C-e") 'yas-expand))
+
+(el-get-bundle yasnippet-snippets)
 
 ;;; whitespace-mode
 (use-package whitespace
@@ -44,26 +49,23 @@
                         :background my/bg-color
                         :underline t)))
 
+(el-get-bundle helm)
 (use-package helm
   :diminish helm-mode
   :bind (("M-x" . helm-M-x)))
 
 ;;; Company-mode
+(el-get-bundle company-mode)
 (use-package company
   :config
   (add-hook 'after-init-hook 'global-company-mode))
 
 ;;; neotree
+(el-get-bundle neotree)
 (use-package neotree
   :config
-  (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (global-set-key [f8] 'neotree-toggle))
 
 ;;; electric-pair-mode
 (electric-pair-mode 1)
-
-;;; ProofGeneral
-(setq-default
- proof-follow-mode (quote follow)
- proof-layout-windows-on-visit-file t
- proof-three-window-enable t
- proof-three-window-mode-policy (quote hybrid))

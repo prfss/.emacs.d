@@ -1,3 +1,6 @@
+(el-get-bundle haskell-mode)
+(el-get-bundle hs-lint)
+(el-get-bundle flycheck-haskell)
 (setq-default
  haskell-indent-look-past-empty-line nil
  haskell-indent-offset 2

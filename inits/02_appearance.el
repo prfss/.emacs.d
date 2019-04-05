@@ -21,3 +21,9 @@
 
 ;; theme
 (load-theme 'dark2 t)
+
+;;; powerline
+(el-get-bundle powerline)
+(use-package powerline
+  :config
+  (powerline-default-theme))

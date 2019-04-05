@@ -1,12 +1,5 @@
 ;;; Initialization code; following code must be placed at the top of the init file
 
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
-
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 
@@ -28,18 +21,16 @@
     (if (file-exists-p local)
         (init-loader-load local))))
 
-(el-get 'sync)
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;; (package-initialize)
 
 ;;; Initialization code ends here
 
 ;;; el for defcustom
 (setq custom-file (locate-user-emacs-file "custom.el"))
-
-;;; powerline - Do not place following code in inits/*.el
-(el-get-bundle powerline)
-(use-package powerline
-  :config
-  (powerline-default-theme))
 
 ;;; debug
 (setq debug-on-error nil)
