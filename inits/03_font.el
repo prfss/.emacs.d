@@ -1,6 +1,6 @@
 ;; Font
 (let* ((font "Ricty Diminished")
-       (size 11)
+       (size 10)
        (h (* size 12))
        (fontspec (font-spec :family font :height h)))
   (set-face-attribute 'default nil :family font :height h)
