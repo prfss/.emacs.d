@@ -35,7 +35,7 @@
   :config
   (global-whitespace-mode 1)
   (setq whitespace-style '(face trailing tabs empty))
-  (let ((my/bg-color "gray18"))
+  (let ((my/bg-color (face-background 'default)))
     (set-face-attribute 'whitespace-trailing nil
                         :foreground "DeepPink"
                         :background my/bg-color
@@ -58,6 +58,15 @@
 (el-get-bundle company-mode)
 (use-package company
   :config
+  (let ((bg (face-attribute 'default :background)))
+    (custom-set-faces
+     `(company-tooltip ((t (:inderit default :background ,(color-lighten-name bg 3)))))
+     `(company-tooltip-common ((t (:weight bold))))
+     `(company-tooltip-selection ((t (:inherit region))))
+     `(company-tooltip-annotation ((t (:inderit company-tooltio))))
+     `(company-scrollbar-fg ((t :background "#b0b0b0")))
+     `(company-scrollbar-bg ((t :background "#808080")))
+     ))
   (add-hook 'after-init-hook 'global-company-mode))
 
 ;;; neotree

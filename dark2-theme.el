@@ -1,16 +1,16 @@
 (deftheme dark2
-  "Created 2018-02-21.")
+  "Created 2019-04-10.")
 
 (custom-theme-set-faces
  'dark2
- '(default ((t (:family "Ricty Diminished" :foundry "PfEd" :width normal :height 131 :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :foreground "#efefef" :background "gray18" :stipple nil :inherit nil))))
+ '(default ((t (:family "Ricty Diminished" :foundry "PfEd" :width normal :height 132 :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :foreground "#efefef" :background "gray18" :stipple nil :inherit nil))))
  '(cursor ((t (:foreground "black" :background "#fff5f5"))))
  '(fixed-pitch ((t (:family "Monospace"))))
- '(variable-pitch ((t (:family "Sans Serif"))))
+ '(variable-pitch ((((type w32)) (:foundry "outline" :family "Arial")) (t (:family "Sans Serif"))))
  '(escape-glyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
  '(minibuffer-prompt ((t (:foreground "deep sky blue"))))
  '(highlight ((((class color) (min-colors 88) (background light)) (:background "darkseagreen2")) (((class color) (min-colors 88) (background dark)) (:background "darkolivegreen")) (((class color) (min-colors 16) (background light)) (:background "darkseagreen2")) (((class color) (min-colors 16) (background dark)) (:background "darkolivegreen")) (((class color) (min-colors 8)) (:foreground "black" :background "green")) (t (:inverse-video t))))
- '(region ((t (:background "SkyBlue4"))))
+ '(region ((t (:background "#505050"))))
  '(shadow ((((class color grayscale) (min-colors 88) (background light)) (:foreground "grey50")) (((class color grayscale) (min-colors 88) (background dark)) (:foreground "grey70")) (((class color) (min-colors 8) (background light)) (:foreground "green")) (((class color) (min-colors 8) (background dark)) (:foreground "yellow"))))
  '(secondary-selection ((t (:inherit (region)))))
  '(trailing-whitespace ((t (:background "indian red"))))
@@ -32,7 +32,7 @@
  '(button ((t (:inherit (link)))))
  '(link ((t (:underline (:color foreground-color :style line) :foreground "deep sky blue"))))
  '(link-visited ((t (:foreground "violet" :inherit (link)))))
- '(fringe ((t (:inherit default))))
+ '(fringe ((t (:inherit (default)))))
  '(header-line ((t (:box nil :foreground "grey90" :background "grey20" :inherit (mode-line)))))
  '(tooltip ((t (:foreground "black" :background "lightyellow" :inherit (variable-pitch)))))
  '(mode-line ((t (:box nil :foreground "white" :background "OliveDrab3"))))
