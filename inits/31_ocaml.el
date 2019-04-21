@@ -25,3 +25,6 @@
 (el-get-bundle Khady/merlin-eldoc)
 (use-package merlin-eldoc
   :hook ((reason-mode tuareg-mode caml-mode) . merlin-eldoc-setup))
+
+;; dune
+(use-package dune)
