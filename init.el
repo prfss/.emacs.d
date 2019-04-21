@@ -3,6 +3,11 @@
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/")))
+
 (add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
 
 (unless (require 'el-get nil 'noerror)
