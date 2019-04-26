@@ -1,4 +1,5 @@
 (el-get-bundle rust-mode)
-(el-get-bundle emacs-racer)
-(el-get-bundle flycheck-rust)
-
+(use-package rust-mode
+  :config
+  (add-hook 'rust-mode-hook #'lsp)
+  (add-hook 'rust-mode-hook #'rust-enable-format-on-save))
