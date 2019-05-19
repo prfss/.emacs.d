@@ -5,7 +5,10 @@
 (use-package flycheck
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode)
-  (add-to-list 'flycheck-gcc-warnings "conversion"))
+  ;;; prefer flymake in rust-mode
+  (add-hook 'rust-mode-hook (lambda () (flycheck-mode -1)))
+  (add-to-list 'flycheck-gcc-warnings "conversion")
+  )
 
 ;;; shell
 ;; shell-mode

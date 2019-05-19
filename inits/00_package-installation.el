@@ -8,7 +8,7 @@
 (use-package lsp-mode
   :commands lsp
   :config
-  (setq lsp-prefer-flymake nil)
+  ;(setq lsp-prefer-flymake nil)
   (lsp-register-client
    (make-lsp-client
     :new-connection (lsp-stdio-connection '("rls"))
@@ -17,8 +17,9 @@
     :server-id 'rls+clippy
     :initialized-fn (lambda (workspace)
                       (with-lsp-workspace workspace (lsp--set-configuration `(:rust (:clippy_preference "on")))))
-    :notification-handlers (lsp-ht ("window/progress" 'lsp-clients--rust-window-progress)))))
-(el-get-bundle lsp-ui)
+    :notification-handlers (lsp-ht ("window/progress" 'lsp-clients--rust-window-progress))
+    )))
+
 (el-get-bundle markdown-mode)
 (el-get-bundle pos-tip)
 (el-get-bundle toml-mode)
