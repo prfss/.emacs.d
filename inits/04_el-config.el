@@ -8,6 +8,7 @@
   ;;; prefer flymake in rust-mode
   (add-hook 'rust-mode-hook (lambda () (flycheck-mode -1)))
   (add-to-list 'flycheck-gcc-warnings "conversion")
+  (add-to-list 'flycheck-clang-warnings "conversion")
   )
 
 ;;; shell
