@@ -20,7 +20,7 @@
   (global-linum-mode))
 
 ;; theme
-(load-theme 'dark2 t)
+(load-theme 'dark3 t)
 
 ;;; powerline
 (el-get-bundle powerline)
