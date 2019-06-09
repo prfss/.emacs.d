@@ -10,6 +10,13 @@
 (column-number-mode 1)
 (tool-bar-mode 0)
 
+;; Frame size
+(setq default-frame-alist
+      '(
+        (width . (text-pixels . 980))
+        (height . (text-pxels . 800))
+        ))
+
 ;; transparency
 (if window-system
     (set-frame-parameter nil 'alpha 85))
