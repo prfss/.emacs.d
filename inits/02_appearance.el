@@ -10,16 +10,18 @@
 (column-number-mode 1)
 (tool-bar-mode 0)
 
-;; Frame size
+;;  frame size
 (setq default-frame-alist
       '(
         (width . (text-pixels . 980))
-        (height . (text-pxels . 800))
+        (height . (text-pixels . 800))
         ))
 
 ;; transparency
 (if window-system
-    (set-frame-parameter nil 'alpha 85))
+    (push `(alpha . 85) default-frame-alist))
+
+(modify-frame-parameters (selected-frame) default-frame-alist)
 
 ;; line number
 (if (version<= "26.0.50" emacs-version)
