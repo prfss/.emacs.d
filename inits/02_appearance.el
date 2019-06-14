@@ -35,4 +35,12 @@
 (el-get-bundle powerline)
 (use-package powerline
   :config
-  (powerline-default-theme))
+  (set-face-attribute 'mode-line nil
+                    :foreground "#fff"
+                    :background "dark slate gray"
+                    :box nil)
+  (set-face-attribute 'powerline-active0 nil
+                      :inherit 'mode-line)
+  (set-face-attribute 'powerline-active1 nil
+                    :inherit 'mode-line)
+  (powerline-center-theme))
