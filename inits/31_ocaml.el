@@ -16,7 +16,7 @@
 ;; merlin
 (use-package merlin
   :load-path opam-load-path
-  :hook ((reason-mode tuareg-mode caml-mode) . merlin-mode)
+  :hook (((reason-mode tuareg-mode caml-mode) . merlin-mode))
   :config
   (setq merlin-command 'opam)
   (setq merlin-ac-setup 'easy))
@@ -24,7 +24,7 @@
 ;; merlin-eldoc
 (el-get-bundle Khady/merlin-eldoc)
 (use-package merlin-eldoc
-  :hook ((reason-mode tuareg-mode caml-mode) . merlin-eldoc-setup))
+  :hook (((reason-mode tuareg-mode caml-mode) . merlin-eldoc-setup)))
 
 ;; dune
 (use-package dune)

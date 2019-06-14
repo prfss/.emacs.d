@@ -1,6 +1,6 @@
 (setq inhibit-startup-screen t)
 
-;; Frame title
+;; frame title
 (setq frame-title-format (format "emacs@%s : %%f" (system-name)))
 
 (setq-default tab-width 4 indent-tabs-mode nil)
@@ -10,7 +10,7 @@
 (column-number-mode 1)
 (tool-bar-mode 0)
 
-;;  frame size
+;; frame size
 (setq default-frame-alist
       '(
         (width . (text-pixels . 980))
