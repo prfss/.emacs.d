@@ -1,5 +1,6 @@
 (el-get-bundle company-mode)
 (use-package company
+  :diminish
   :config
   (let ((bg (face-attribute 'default :background))
         (name-common (face-attribute 'font-lock-function-name-face :foreground))
