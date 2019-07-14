@@ -19,7 +19,9 @@
   :hook (((reason-mode tuareg-mode caml-mode) . merlin-mode))
   :config
   (setq merlin-command 'opam)
-  (setq merlin-ac-setup 'easy))
+  (setq merlin-ac-setup 'easy)
+  (add-hook 'merlin-mode-hook (lambda () (merlin-use "batteries")))
+  )
 
 ;; merlin-eldoc
 (el-get-bundle Khady/merlin-eldoc)
