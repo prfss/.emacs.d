@@ -29,18 +29,18 @@
   (global-linum-mode))
 
 ;; theme
-(load-theme 'dark3 t)
+(el-get-bundle nashamri/spacemacs-theme)
+(use-package spacemacs-dark-theme
+  :config
+  (load-theme 'spacemacs-dark t))
 
 ;;; powerline
 (el-get-bundle powerline)
 (use-package powerline
+  :init
+  (setq powerline-default-separator 'slant))
+
+(el-get-bundle spaceline)
+(use-package spaceline-config
   :config
-  (set-face-attribute 'mode-line nil
-                    :foreground "#fff"
-                    :background "dark slate gray"
-                    :box nil)
-  (set-face-attribute 'powerline-active0 nil
-                      :inherit 'mode-line)
-  (set-face-attribute 'powerline-active1 nil
-                    :inherit 'mode-line)
-  (powerline-center-theme))
+  (spaceline-emacs-theme))
