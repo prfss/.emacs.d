@@ -1,1 +1,1 @@
-(el-get-bundle ruby-mode)
+(use-package ruby-mode)

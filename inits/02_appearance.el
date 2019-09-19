@@ -29,18 +29,16 @@
   (global-linum-mode))
 
 ;; theme
-(el-get-bundle nashamri/spacemacs-theme)
 (use-package spacemacs-dark-theme
+  :straight spacemacs-theme
   :config
   (load-theme 'spacemacs-dark t))
 
-;;; powerline
-(el-get-bundle powerline)
+;; powerline
 (use-package powerline
   :init
   (setq powerline-default-separator 'slant))
 
-(el-get-bundle spaceline)
-(use-package spaceline-config
+(use-package spaceline
   :config
   (spaceline-emacs-theme))

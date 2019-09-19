@@ -1,1 +1,1 @@
-(el-get-bundle cmake-mode)
+(use-package cmake-mode)

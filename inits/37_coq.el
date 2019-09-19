@@ -1,5 +1,4 @@
 ;;; ProofGeneral
-(el-get-bundle proof-general)
 (use-package proof-general
   :config
   (setq-default

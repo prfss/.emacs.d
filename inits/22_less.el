@@ -1,1 +1,1 @@
-(el-get-bundle less-css-mode)
+(use-package less-css-mode)

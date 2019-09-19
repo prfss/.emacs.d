@@ -1,4 +1,8 @@
-(el-get-bundle helm)
 (use-package helm
-  :diminish helm-mode
   :bind (("M-x" . helm-M-x)))
+
+(use-package helm-config
+  :straight helm
+  :diminish helm-mode
+  :config
+  (helm-mode 1))

@@ -8,18 +8,25 @@
         ("melpa" . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/")))
 
-(add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+(straight-use-package 'use-package)
 
-(add-to-list 'el-get-recipe-path (locate-user-emacs-file "el-get-user/recipes"))
+(setq straight-use-package-by-default t)
 
-(el-get-bundle! 'init-loader
+(use-package init-loader
+  :config
   (setq-default init-loader-show-log-after-init nil)
   (init-loader-load)
   (let ((local (concat (file-name-as-directory init-loader-directory) "local")))

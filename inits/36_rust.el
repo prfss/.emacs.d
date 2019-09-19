@@ -1,13 +1,11 @@
-(el-get-bundle rust-mode)
 (use-package rust-mode
   :config
-  (add-hook 'rust-mode-hook #'lsp)
   ;;; prefer flymake in rust-mode
-  (add-hook 'rust-mode-hook (lambda () (flycheck-mode -1)))
+  ;(add-hook 'rust-mode-hook (lambda () (flycheck-mode -1)))
   (add-hook 'rust-mode-hook #'rust-enable-format-on-save)
   )
 
-(el-get-bundle flycheck-rust)
+(use-package flycheck-rust)
 
 (use-package lsp-mode
   :config

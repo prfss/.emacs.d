@@ -1,5 +1,4 @@
-(el-get-bundle neotree)
-(el-get-bundle all-the-icons)
+(use-package all-the-icons)
 (use-package neotree
   :bind (([f8] . neotree-toggle))
   :config

@@ -1,2 +1,2 @@
-(el-get-bundle crystal-mode)
+(use-package crystal-mode)
 (use-package flycheck-crystal)
