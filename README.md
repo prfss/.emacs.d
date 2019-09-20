@@ -18,6 +18,13 @@ See [Real World OCaml](https://dev.realworldocaml.org/install.html)
 * merlin
 * ocp-indent
 
+### Python
+* flake8
+* mypy
+
+### Ruby
+* solargraph
+
 ### Rust
 * clippy
 * rls
