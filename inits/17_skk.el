@@ -1,4 +1,5 @@
-(use-package ddskk
+(use-package skk
+  :straight ddskk
   :bind (("C-x C-j" . skk-mode)))
 
 (setq skk-cursor-hiragana-color "deep pink")

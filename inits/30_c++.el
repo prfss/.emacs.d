@@ -7,7 +7,7 @@
 
 ;; irony-mode
 (use-package irony
-  :hook (c++-mode c-mode objc-mode)
+  :hook ((c++-mode c-mode objc-mode) . irony-mode)
   :config
   (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
 
