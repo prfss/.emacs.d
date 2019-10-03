@@ -8,6 +8,9 @@
         ("melpa" . "https://melpa.org/packages/")
         ("melpa-stable" . "https://stable.melpa.org/packages/")))
 
+;; See https://github.com/raxod502/straight.el#my-init-time-got-slower
+(setq straight-check-for-modifications '(check-on-save find-when-checking))
+
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
