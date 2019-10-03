@@ -10,6 +10,9 @@ Emacs >= 24
 * make
 * makeinfo
 
+### D
+* dls
+
 ### Haskell
 * stylish-haskell
 
@@ -33,4 +36,5 @@ See [Real World OCaml](https://dev.realworldocaml.org/install.html)
 ### Emacs
 ```
 M-x irony-install-server
+M-x jedi:install-server
 ```
