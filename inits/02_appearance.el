@@ -29,16 +29,14 @@
   (global-linum-mode))
 
 ;; theme
-(use-package spacemacs-dark-theme
-  :straight spacemacs-theme
+(use-package doom-themes
   :config
-  (load-theme 'spacemacs-dark t))
+  (load-theme 'doom-one t))
 
-;; powerline
-(use-package powerline
-  :init
-  (setq powerline-default-separator 'slant))
-
-(use-package spaceline
+;; modeline
+(use-package doom-modeline
+  :hook (after-init . doom-modeline-mode)
   :config
-  (spaceline-emacs-theme))
+  (setq doom-modeline-minor-modes (featurep 'minions)))
+
+(use-package minions)
