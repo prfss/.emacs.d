@@ -19,7 +19,7 @@
 
 ;; transparency
 (if window-system
-    (push `(alpha . 85) default-frame-alist))
+    (push `(alpha . 95) default-frame-alist))
 
 (modify-frame-parameters (selected-frame) default-frame-alist)
 
@@ -37,6 +37,7 @@
 (use-package doom-modeline
   :hook (after-init . doom-modeline-mode)
   :config
-  (setq doom-modeline-minor-modes (featurep 'minions)))
+  (setq doom-modeline-minor-modes (featurep 'minions))
+  (setq doom-modeline-buffer-file-name-style 'buffer-name))
 
 (use-package minions)
