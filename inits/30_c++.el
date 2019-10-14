@@ -2,6 +2,9 @@
 (add-hook 'c++-mode-hook
           (lambda () (flycheck-select-checker 'c/c++-clang)))
 
+(add-hook 'c++-mode-hook
+          (lambda () (add-hook 'before-save-hook #'indent-buffer t)))
+
 (add-to-list 'flycheck-gcc-warnings "conversion")
 (add-to-list 'flycheck-clang-warnings "conversion")
 
