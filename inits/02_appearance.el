@@ -41,3 +41,6 @@
   (setq doom-modeline-buffer-file-name-style 'buffer-name))
 
 (use-package minions)
+
+(set-face-attribute 'show-paren-match nil
+                    :background (face-attribute 'default :background))
