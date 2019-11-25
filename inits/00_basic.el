@@ -1,5 +1,7 @@
 (use-package diminish)
 
+(use-package bind-key)
+
 (defun indent-buffer ()
   (interactive)
   (save-excursion
