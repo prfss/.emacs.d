@@ -6,3 +6,5 @@
   :diminish helm-mode
   :config
   (helm-mode 1))
+
+(use-package helm-lsp)
