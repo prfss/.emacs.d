@@ -2,7 +2,7 @@
   :diminish global-whitespace-mode
   :config
   (setq whitespace-action '(auto-cleanup))
-  (setq whitespace-style '(face empty indentation tabs tab-mark trailing))
+  (setq whitespace-style '(face empty indentation tabs tab-mark))
   (let ((my/bg-color (face-background 'default)))
     (set-face-attribute 'whitespace-empty nil
                         :foreground "DeepPink"
