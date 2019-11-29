@@ -1,11 +1,7 @@
 (use-package haskell-mode)
-(use-package hs-lint)
-(use-package flycheck-haskell)
-(setq-default
- haskell-indent-look-past-empty-line nil
- haskell-indent-offset 2
- haskell-indent-thenelse 1
- haskell-mode-hook (quote (haskell-indent-mode turn-on-haskell-doc-mode))
- haskell-program-name "ghci"
- ;; stylish-haskell
- haskell-stylish-on-save t)
+
+(use-package lsp-haskell
+  :config
+  (add-hook 'haskell-mode-hook #'lsp)
+  (setq lsp-haskell-process-path-hie "hie-wrapper")
+  )
